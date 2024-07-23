@@ -17,15 +17,22 @@ html {
 
   --ff-body: "Inter", sans-serif;
 
-  --fz-body: 14px;
+  --fz-1: rem(24px);
+  --fz-2: rem(14px);
+
+  --lh: 1.5em;
+  
   --fw-bold: 700;
   --fw-semi-bold: 600;
   --fw-regular: 400;
+
+  --space-500: rem(40px);
+  --space-300: rem(24px);
+  --space-200: rem(16px);
+  --space-150: rem(12px);
+  --space-100: rem(8px);
+  --space-50: rem(4px);
 }
-
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
-
 
 *,*::before,*::after {box-sizing: inherit;}
 
@@ -33,7 +40,6 @@ html {
 
 h1,h2,h3,h4,h5,h6 {
   font-family: var(--ff-body);
-  font-weight: 400;
 }
 
 body {
@@ -41,312 +47,34 @@ body {
   height: inherit;
   font-family: var(--ff-body);
   font-optical-sizing: auto;
-  background-color: white;
-  display: grid;
-  place-items: center;    
 }
-
-article {
-  background-color: white;
-  max-width: 736px;
-}
-
-h1 {
-  font-size: rem(36px);
-  color: var(--dark-charcoal);
-}
-
-h2 {
-  font-size: rem(28px);
-  color: var(--nutmeg);
-}
-
-p,ul,ol,strong,b,a,td {
-  font: {
-    family: var(--ff-body);
-    size: rem(16px);
-  }
-  color: var(--wenge-brown);
-}
-
-a {text-decoration: none;}
-
-ol, ul {list-style-position: outside;}
 
 footer {
+  position: fixed;
+  bottom: 1rem;
   text-align: center; 
   font: {
-    family:var(--ff-body);
     size: rem(11px);
   }
   
   > a {
     font-size: rem(11px);
-    color: var(--dark-raspberry);
+    color: var(--grey-900);
+    text-decoration: none;
   }
   
-  > a:visited {
-    font-size: rem(11px);
-    color: var(--nutmeg);
+  > a:visited,
+  > a:hover {
+    color: var(--green);
+    transition: .4s;
   }
 }
 /* #endregion Defaults */
 
 /* #region Mobile Styling */
 
-/* #region Hero */
-#hero {
-  display: grid;
-  place-items: center;
-  row-gap: 1.75rem;
-  grid: 
-  "   img  img  img   "
-  "    .    h1   .    "
-  "    .    p    .    "
-  "    .   div   .    "
-  "    .    .    .    "
-  / 1.5rem auto 1.5rem;
-  
-  img {
-    grid-area: img;
-    width: min(rem(656px), 100%);
-  }
-  
-  h1 {
-    grid-area: h1;
-    line-height: 1em;
-  }
-
-  p {
-    grid-area: p;
-    line-height: 1.5em;
-  }
-
-  div {
-    grid-area: div;
-    background-color: var(--rose-white);
-    width: rem(310px);
-    height: rem(190px);
-    border-radius: rem(10px);
-    padding-inline: rem(24px);
-    padding-block-start: rem(20px);
-    display: grid;
-    place-content: center;
-
-    strong {
-      font-size: rem(20px);
-      color: var(--dark-raspberry);
-    }
-
-    ul {
-      padding-inline-start: rem(24px);
-    }
-    
-    li {
-      line-height: 1.75em;
-      padding-inline-start: rem(28px);
-    }
-    
-    li::marker {
-      color: var(--dark-raspberry);
-      font-size: rem(12px);
-      margin-block: auto;
-    }
-
-    b {
-      font-weight: var(--fw-bold);
-    }
-  }
-}
-/* #endregion Hero */
-
-/* #region Ingredients */
-#ingredients {
-  padding-inline: 1.5rem;
-
-  ul {
-    padding-inline-start: rem(24px);
-
-    li {
-      padding-inline-start: 1rem;
-      line-height: 1.4em;
-    }
-    
-    :not(:last-child) {
-      margin-block-end: 0.75rem;
-    }
-
-    ::marker {
-      font-size: rem(12px);
-      color: var(--nutmeg);
-    }
-
-  }
-}
-
-hr {
-  border-top-color: var(--light-grey);
-  border-style: solid;
-  border-width: rem(1px) 0 0;
-  margin: 2rem 1.5rem;
-}
-/* #endregion Ingredients */
-
-/* #region Instructions */
-#instructions {
-  padding-inline: 1.5rem;
-
-  ol {
-    padding-inline-start: rem(24px);
-
-    li {
-      padding-inline-start: 1rem;
-      line-height: 1.4em;
-    }
-    
-    :not(:last-child) {
-      margin-block-end: 0.75rem;
-    }
-
-    ::marker {
-      color: var(--nutmeg);
-      font-weight: var(--fw-bold);
-    }
-
-  }
-
-}
-/* #endregion Instructions */
-
-/* #region Nutrition */
-#nutrition {
-  padding-inline: 1.5rem;
-
-  h2 {
-    line-height: 1em;
-    margin-block-end: 1.75rem;
-  }
-
-  ul {
-    padding-inline-start: 0;
-
-    li {
-      padding-inline-start: 2rem;
-      list-style-type: none;
-      display: grid;
-      grid-template-columns: 2fr 2.25fr;
-      line-height: 1em;
-    }
-    
-    :not(:last-of-type) {
-      border-bottom: rem(1px) solid var(--light-grey);
-    }
-  }
-
-  b {color: var(--nutmeg);}
-
-  span,b {
-    display: inline-block;
-    padding-block: 1rem;
-  }
-  
-}
-/* #endregion Nutrition */
-
-@media only screen and (max-width: em(375px)) {
-  #hero {
-    h1 {
-      font-size: rem(30px);
-    }
-
-    div {
-      width: 100%;
-
-      ul {
-        padding-inline-start: rem(20px);
-      }
-      
-      li {
-        line-height: 1.4em;
-        padding-inline-start: 0;
-      }
-    }
-
-  }
-}
 /* #endregion Mobile Styling */
 
 /* #region Desktop Styling */
-@media only screen and (min-width: em(750px)) {
-  body {
-    background-color: var(--eggshell);
-  }
-  
-  main {
-    margin-block: rem(122px);
-  }
 
-  article {
-    padding-block-start: rem(40px);
-    padding-block-end: rem(10px);
-    border-radius: rem(24px);  
-  }
-
-  hr {
-    margin-inline: rem(40px);
-  }
-
-  #hero {
-    place-items: stretch;
-    row-gap: 1.5rem;
-    grid: 
-    "   img  img  img   "
-    "    .    h1   .    "
-    "    .    p    .    "
-    "    .   div   .    "
-    "    .    .    .    "
-    / rem(40px) auto rem(40px);
-    
-    img {
-      place-self: center;
-      border-radius: rem(10px);
-      margin-block-end: rem(10px);
-    }
-    
-    h1 {
-      font-size: (40px);
-    }
-
-    p {
-      margin-block-end: rem(10px);
-    }
-
-    div {
-      width: max(rem(310px), 100%);
-      height: rem(180px);
-      padding-inline: rem(30px);
-      padding-block-start: rem(20px);
-      justify-content: start;
-
-      li {
-        line-height: 2em;
-        padding-inline-start: rem(16px);
-      }
-    }
-  }
-
-  #ingredients,
-  #instructions,
-  #nutrition {
-    padding-inline: rem(40px);
-  }
-
-  #nutrition {
-    ul {
-      li {
-        grid-template-columns: 2fr 2.15fr;
-      }
-    }
-  }
-}
 /* #endregion Desktop Styling */
