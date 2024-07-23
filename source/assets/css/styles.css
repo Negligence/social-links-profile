@@ -4,18 +4,24 @@ html {
   scroll-behavior: smooth;
   height: 100%;
   width: 100%;
-  --nutmeg: hsl(14, 45%, 36%);
-  --dark-raspberry: hsl(332, 51%, 32%);
-  --rose-white: hsl(330, 100%, 98%);
-  --eggshell: hsl(30, 54%, 90%);
-  --light-grey: hsl(30, 18%, 87%);
-  --wenge-brown: hsl(30, 10%, 34%);
-  --dark-charcoal: hsl(24, 5%, 18%);
-  --ff-head: "Young Serif", serif;
-  --ff-body: "Outfit", sans-serif;
+  --green: hsl(75, 94%, 57%);
+  --grey-700: hsl(0, 0%, 20%);
+  --grey-800: hsl(0, 0%, 12%);
+  --grey-900: hsl(0, 0%, 8%);
+  --ff-body: "Inter", sans-serif;
+  --fz-body: 14px;
   --fw-bold: 700;
   --fw-semi-bold: 600;
   --fw-regular: 400;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
 }
 
 *, *::before, *::after {
@@ -27,7 +33,7 @@ html {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--ff-head);
+  font-family: var(--ff-body);
   font-weight: 400;
 }
 
@@ -35,6 +41,7 @@ body {
   width: inherit;
   height: inherit;
   font-family: var(--ff-body);
+  font-optical-sizing: auto;
   background-color: white;
   display: grid;
   place-items: center;
