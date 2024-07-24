@@ -4,6 +4,7 @@ html {
   scroll-behavior: smooth;
   height: 100%;
   width: 100%;
+  --white: hsl(0, 0%, 100%);
   --green: hsl(75, 94%, 57%);
   --grey-700: hsl(0, 0%, 20%);
   --grey-800: hsl(0, 0%, 12%);
@@ -42,24 +43,57 @@ body {
   font-optical-sizing: auto;
 }
 
-footer {
+.attribution {
   position: fixed;
   bottom: 1rem;
+  font-size: 11px;
   text-align: center;
-  font-size: 0.6875rem;
 }
-footer > a {
-  font-size: 0.6875rem;
+
+.attribution a {
   color: var(--grey-900);
   text-decoration: none;
 }
-footer > a:visited,
-footer > a:hover {
+
+.attribution a:visited,
+.attribution a:hover {
   color: var(--green);
   transition: 0.4s;
 }
 
 /* #endregion Defaults */
+/* #region Reusable CSS */
+.text-preset-1 {
+  font-size: var(--fz-1);
+  font-weight: var(--fw-semi-bold);
+  line-height: var(--lh);
+}
+
+.text-preset-2 {
+  font-size: var(--fz-2);
+  font-weight: var(--fw-regular);
+  line-height: var(--lh);
+}
+
+.text-preset-2-bold {
+  font-size: var(--fz-2);
+  font-weight: var(--fw-bold);
+  line-height: var(--lh);
+}
+
+.button {
+  background-color: var(--grey-700);
+  color: white;
+  width: 19rem;
+  padding: 0.75rem;
+}
+
+.button:hover {
+  background-color: var(--green);
+  transition: 0.4s;
+}
+
+/* #endregion Reusable CSS */
 /* #region Mobile Styling */
 /* #endregion Mobile Styling */
 /* #region Desktop Styling */
