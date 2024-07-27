@@ -106,7 +106,7 @@ main {
   border-radius: 0.75rem;
   padding: var(--s-300);
   gap: var(--s-300);
-  border-radius: var(--grey-800);
+  background-color: var(--grey-800);
   color: var(--white);
   place-items: center;
 }
