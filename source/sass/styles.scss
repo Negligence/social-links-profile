@@ -18,30 +18,20 @@ html {
 
   --ff-body: "Inter", sans-serif;
 
-  --fz-1: rem(24px);
-  --fz-2: rem(14px);
+  --fz-1: calc(24 / 16 * 1rem);
+  --fz-2: calc(14 / 16 * 1rem);
 
-  --lh: 1.5em;
-  
-  --fw-bold: 700;
-  --fw-semi-bold: 600;
-  --fw-regular: 400;
-
-  --space-500: rem(40px);
-  --space-300: rem(24px);
-  --space-200: rem(16px);
-  --space-150: rem(12px);
-  --space-100: rem(8px);
-  --space-50: rem(4px);
+  --s-500: calc(40 / 16 * 1rem);
+  --s-300: calc(24 / 16 * 1rem);
+  --s-200: calc(16 / 16 * 1rem);
+  --s-150: calc(12 / 16 * 1rem);
+  --s-100: calc(8 / 16 * 1rem);
+  --s-50: calc(4 / 16 * 1rem);
 }
 
 *,*::before,*::after {box-sizing: inherit;}
 
 :not(ul, ol, li) {margin: 0;}
-
-h1,h2,h3,h4,h5,h6 {
-  font-family: var(--ff-body);
-}
 
 body {
   width: inherit;
@@ -70,22 +60,26 @@ body {
 /* #endregion Defaults */
 
 /* #region Reusable CSS */
+.grid {
+  display: grid;
+}
+
 .text-preset-1 {
   font-size: var(--fz-1);
-  font-weight: var(--fw-semi-bold);
-  line-height: var(--lh);
+  font-weight: 600;
+  line-height: 1.5em;
 }
 
 .text-preset-2 {
   font-size: var(--fz-2);
-  font-weight: var(--fw-regular);
-  line-height: var(--lh);
+  font-weight: 400;
+  line-height: 1.5em;
 }
 
 .text-preset-2-bold {
   font-size: var(--fz-2);
-  font-weight: var(--fw-bold);
-  line-height: var(--lh);
+  font-weight: 700;
+  line-height: 1.5em;
 }
 
 .button {
@@ -102,6 +96,47 @@ body {
 /* #endregion Reusable CSS */
 
 /* #region Mobile Styling */
+main {
+  width: inherit;
+  height: inherit;
+  display: grid;
+  place-content: center;
+  padding-inline: var(--s-300);
+  background-color: var(--grey-900);
+}
+
+.card {
+  width: rem(327px);
+  height: rem(579px);
+  border-radius: rem(12px);
+  padding: var(--s-300);
+  gap: var(--s-300);
+  border-radius: var(--grey-800);
+  color: var(--white);
+  place-items: center;
+}
+
+.profile-pic {
+  width: rem(88px);
+  height: rem(88px);
+  border-radius: 100vmax;
+  align-self: center;
+}
+
+.name-location {
+  width: rem(279px);
+  height: rem(61px);
+  gap: var(--s-50);
+  text-align: center;
+}
+
+.title {
+
+}
+
+.links {
+
+}
 
 /* #endregion Mobile Styling */
 
