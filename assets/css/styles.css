@@ -37,20 +37,22 @@ body {
 
 .attribution {
   position: fixed;
+  left: 0;
+  right: 0;
   bottom: 1rem;
   font-size: 0.6875rem;
   text-align: center;
+  color: var(--white);
 }
 
 .attribution a {
-  color: var(--grey-900);
-  text-decoration: none;
+  transition: 0.4s;
 }
 
-.attribution a:visited,
-.attribution a:hover {
+.attribution a:hover,
+.attribution a:visited {
   color: var(--green);
-  transition: 0.4s;
+  text-decoration: none;
 }
 
 /* #endregion Defaults */
@@ -78,14 +80,19 @@ body {
 }
 
 .button {
+  text-decoration: none;
+  text-align: center;
   background-color: var(--grey-700);
+  border-radius: 0.5rem;
   color: white;
-  width: 19rem;
-  padding: 0.75rem;
+  width: 17.4375rem;
+  height: 2.8125rem;
+  padding: var(--s-150);
 }
 
 .button:hover {
   background-color: var(--green);
+  color: var(--grey-700);
   transition: 0.4s;
 }
 
@@ -123,6 +130,14 @@ main {
   height: 3.8125rem;
   gap: var(--s-50);
   text-align: center;
+}
+
+.description {
+  color: var(--green);
+}
+
+.links {
+  gap: var(--s-200);
 }
 
 /* #endregion Mobile Styling */

@@ -42,20 +42,22 @@ body {
 
 .attribution {
   position: fixed;
+  left: 0;
+  right: 0;
   bottom: 1rem;
   font-size: rem(11px);
   text-align: center;
+  color: var(--white);
 }
 
 .attribution a {
-  color: var(--grey-900);
-  text-decoration: none;
+  transition: .4s;
 }
 
-.attribution a:visited,
-.attribution a:hover {
+.attribution a:hover,
+.attribution a:visited {
   color: var(--green);
-  transition: .4s;
+  text-decoration: none;
 }
 /* #endregion Defaults */
 
@@ -83,14 +85,19 @@ body {
 }
 
 .button {
+  text-decoration: none;
+  text-align: center;
   background-color: var(--grey-700);
+  border-radius: rem(8px);
   color: white;
-  width: rem(304px);
-  padding: rem(12px);
+  width: rem(279px);
+  height: rem(45px);
+  padding: var(--s-150);
 }
 
 .button:hover {
   background-color: var(--green);
+  color: var(--grey-700);
   transition: .4s;
 }
 /* #endregion Reusable CSS */
@@ -134,8 +141,12 @@ main {
 
 }
 
-.links {
+.description {
+  color: var(--green);
+}
 
+.links {
+  gap: var(--s-200);
 }
 
 /* #endregion Mobile Styling */
