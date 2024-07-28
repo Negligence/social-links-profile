@@ -81,7 +81,6 @@ body {
 
 .button {
   text-decoration: none;
-  text-align: center;
   background-color: var(--grey-700);
   border-radius: 0.5rem;
   color: white;
@@ -93,11 +92,11 @@ body {
 .button:hover {
   background-color: var(--green);
   color: var(--grey-700);
-  transition: 0.4s;
+  transition: 0.5s;
 }
 
 /* #endregion Reusable CSS */
-/* #region Mobile Styling */
+/* #region Mobile */
 main {
   width: inherit;
   height: inherit;
@@ -116,6 +115,7 @@ main {
   background-color: var(--grey-800);
   color: var(--white);
   place-items: center;
+  text-align: center;
 }
 
 .profile-pic {
@@ -129,7 +129,6 @@ main {
   width: 17.4375rem;
   height: 3.8125rem;
   gap: var(--s-50);
-  text-align: center;
 }
 
 .description {
@@ -140,6 +139,21 @@ main {
   gap: var(--s-200);
 }
 
-/* #endregion Mobile Styling */
-/* #region Desktop Styling */
-/* #endregion Desktop Styling */
+@media only screen and (max-width: 23.375em) {
+  .card {
+    width: 17.5rem;
+    height: 36.1875rem;
+    border-radius: 0.75rem;
+    padding: var(--s-300);
+    gap: var(--s-300);
+    background-color: var(--grey-800);
+    color: var(--white);
+    place-items: center;
+    text-align: center;
+  }
+}
+/* #endregion Mobile */
+/* #region Tablet */
+/* #endregion Tablet */
+/* #region Desktop */
+/* #endregion Desktop */
