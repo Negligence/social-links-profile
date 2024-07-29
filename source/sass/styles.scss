@@ -131,7 +131,7 @@ main {
 }
 
 .name-location {
-  width: rem(279px);
+  width: 100%;
   height: rem(61px);
   gap: var(--s-50);
 }
@@ -147,21 +147,36 @@ main {
 @media only screen and (max-width: em(374px)) {
   .card {
     width: rem(280px);
-    height: rem(579px);
-    border-radius: rem(12px);
-    padding: var(--s-300);
-    gap: var(--s-300);
-    background-color: var(--grey-800);
-    color: var(--white);
-    place-items: center;
-    text-align: center;
+    padding: var(--s-200);
+    gap: var(--s-100);
+  }
+
+  .profile-pic {
+    width: rem(88px);
+    height: rem(88px);
+    border-radius: 100vmax;
+    align-self: center;
+  }
+
+  .links {
+    gap: var(--s-150);
+  }
+
+  .button {
+    width: rem(219px);
+    height: rem(39px);
+    padding: var(--s-100);
   }
 }
 /* #endregion Mobile */
 
 /* #region Tablet */
 @media only screen and (min-width: em(768px)) {
-
+  .card {
+    width: rem(456px);
+    height: rem(611px);
+    padding: var(--s-500);
+  }
 }
 /* #endregion Tablet */
 
