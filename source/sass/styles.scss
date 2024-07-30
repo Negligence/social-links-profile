@@ -101,7 +101,7 @@ body {
 }
 /* #endregion Reusable CSS */
 
-/* #region Mobile */
+/* #region Mobile 375px */
 main {
   width: inherit;
   height: inherit;
@@ -131,7 +131,6 @@ main {
 }
 
 .name-location {
-  width: 100%;
   height: rem(61px);
   gap: var(--s-50);
 }
@@ -143,7 +142,9 @@ main {
 .links {
   gap: var(--s-200);
 }
+/* #endregion Mobile 375px */
 
+/* #region Extra Small 320px */
 @media only screen and (max-width: em(374px)) {
   .card {
     width: rem(280px);
@@ -168,18 +169,30 @@ main {
     padding: var(--s-100);
   }
 }
-/* #endregion Mobile */
+/* #endregion Extra Small 320px */
 
-/* #region Tablet */
+/* #region Tablet 768px */
 @media only screen and (min-width: em(768px)) {
   .card {
     width: rem(456px);
     height: rem(611px);
     padding: var(--s-500);
   }
+
+  .button {
+    width: rem(376px);
 }
-/* #endregion Tablet */
+}
+/* #endregion Tablet 768px */
 
-/* #region Desktop */
+/* #region Desktop 1440px */
+@media only screen and (min-width: em(1440px)) {
+  .card {
+    width: rem(384px);
+  }
 
-/* #endregion Desktop */
+  .button {
+    width: rem(304px);
+  }
+}
+/* #endregion Desktop 1440px */
