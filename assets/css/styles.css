@@ -47,6 +47,7 @@ body {
 
 .attribution a {
   transition: 0.4s;
+  color: var(--white);
 }
 
 .attribution a:hover,
